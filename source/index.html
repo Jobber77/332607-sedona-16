@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>Главная Седона</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
       <div class="page-header__wrapper">
         <a class="page-header__logo">
-          <img class="page-header__logo-image" src="http://placehold.it/150x100" alt="Sedona logo">
+          <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" alt="Sedona logo">
         </a>
         <nav class="main-nav">
           <button class="main-nav__toggle" type="button">Показать или скрыть меню</button>
@@ -30,14 +31,14 @@
     </header>
     <main class="page-main">
       <section class="main-intro">
-        <h1 class="visually-hidden">Welcome to the georgeous Sedona</h1>
-        <img src="http://placehold.it/150x100" alt="Welcome to the georgeous Sedona. Because Grand Canyon sucks!" class="main-intro__image-text"></img>
+        <h1 hidden>Welcome to the georgeous Sedona</h1>
+        <img src="img/text-sedona-index.svg" alt="Welcome to the georgeous Sedona. Because Grand Canyon sucks!" class="main-intro__image-text"></img>
       </section>
       <section class="features">
-        <p class="features__intro">
+        <div class="features__intro">
           <h2 class="features__header">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
           <p class="features__intro-text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
-        </p>
+        </div>
         <article class="feature-single">
           <div class="feature-single__section">
             <h3 class="feature-single__header">Настоящий городок</h3>
@@ -45,7 +46,7 @@
             <p class="feature-single__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
           </div>
           <div class="feature-single__section feature-single__section--image-container">
-            <img src="http://placehold.it/150x100" alt="Настоящий городок" class="feature-single__image">
+            <img src="img/main-city-mobile@1x.jpg" alt="Настоящий городок" class="feature-single__image">
           </div>
         </article>
         <ul class="goods-list">
@@ -69,19 +70,19 @@
             <p class="feature-single__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
           </div>
           <div class="feature-single__section feature-single__section--image-container">
-            <img src="http://placehold.it/150x100" alt="Настоящий городок" class="feature-single__image">
+            <img src="img/photo-bridge-mobile@1x.jpg" alt="Мост Дьявола" class="feature-single__image">
           </div>
         </div>
         <ul class="feature-list">
           <li class="feature-list__item">
-              <h3 class="feature-list__header">Небольшая площадь</h3>
-              <p class="feature-list__number">&mdash; №3 &mdash;</p>
-              <p class="feature-list__details">Все интересные места находятся очень близко</p>
+              <h3 class="feature-list__item-header">Небольшая площадь</h3>
+              <p class="feature-list__item-number">&mdash; №3 &mdash;</p>
+              <p class="feature-list__item-details">Все интересные места находятся очень близко</p>
           </li>
           <li class="feature-list__item">
-            <h3 class="feature-list__header">Красивая дорога</h3>
-            <p class="feature-list__number">&mdash; №4 &mdash;</p>
-            <p class="feature-list__details">Ехать в Седону ИЗ Лас-Вегаса совсем не скучно!</p>
+            <h3 class="feature-list__item-header">Красивая дорога</h3>
+            <p class="feature-list__item-number">&mdash; №4 &mdash;</p>
+            <p class="feature-list__item-details">Ехать в Седону ИЗ Лас-Вегаса совсем не скучно!</p>
           </li>
           <li class="feature-list__item">
             <h3 class="feature-list__item-header">Мало туристов</h3>
@@ -94,9 +95,9 @@
     <footer class="page-footer">
       <span class="page-footer__hashtag">#visitsedona</span>
       <ul class="page-footer__social social-links">
-        <li class="social-links__item"><a href="#" class="social-list__link">Twitter</a></li>
-        <li class="social-links__item"><a href="#" class="social-list__link">Facebook</a></li>
-        <li class="social-links__item"><a href="#" class="social-list__link">Youtube</a></li>
+        <li class="social-links__item"><a href="#" class="social-list__link social-list__link-twitter">Twitter</a></li>
+        <li class="social-links__item"><a href="#" class="social-list__link social-list__link-facebook">Facebook</a></li>
+        <li class="social-links__item"><a href="#" class="social-list__link social-list__link-youtube">Youtube</a></li>
       </ul>
       <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__developer-link"><span>Разработано в HTML academy</span></a>
     </footer>
