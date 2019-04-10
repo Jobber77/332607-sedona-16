@@ -46,7 +46,7 @@
     padding: 0;
     border: none;
     width: 324px;
-    
+
     &:first-of-type {
       width: 100%;
     }
@@ -66,5 +66,31 @@
 }
 
 @media (min-width: @desktop-width) {
+  .photo-card {
+    position: relative;
+    width: 400px;
 
+    &:first-of-type {
+      width: 100%;
+    }
+  }
+
+  .photo-card__section {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+  }
+
+  .photo-card__title {
+    color: #ffffff;
+  }
+
+  .photo-card__author {
+    color: #ffffff;
+  }
+
+  .photo-card__like-counter {
+    color: #ffffff;
+  }
 }
