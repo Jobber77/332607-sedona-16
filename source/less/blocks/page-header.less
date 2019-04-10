@@ -1,7 +1,8 @@
 .page-header {
   background-color: white;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
+  width: @mobile-width;
 }
 
 .page-header__wrapper {
@@ -24,4 +25,35 @@
   width: 100%;
   position: absolute;
   z-index: 1;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    width: @tablet-width;
+  }
+
+  .page-header__wrapper {
+    flex-direction: row;
+    padding: 0;
+  }
+  .page-header__logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    background: url("../img/logo-sedona-tablet.svg") no-repeat;
+    width: 102px;
+    height: 83px;
+  }
+
+  .page-header__logo-image {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    width: @desktop-width;
+  }
 }

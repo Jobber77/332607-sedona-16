@@ -11,6 +11,7 @@
 
 .photo-card__image {
   width: 100%;
+  display: block;
 }
 
 .photo-card__title {
@@ -37,4 +38,33 @@
 
 .photo-card__like-counter {
   .font(14px, 24px, #000000, bold);
+}
+
+@media (min-width: @tablet-width) {
+  .photo-card {
+    box-sizing: border-box;
+    padding: 0;
+    border: none;
+    width: 324px;
+    
+    &:first-of-type {
+      width: 100%;
+    }
+
+    &:last-of-type {
+      border: none;
+    }
+  }
+
+  .photo-card__image {
+    height: 267px;
+  }
+
+  .photo-card:first-of-type .photo-card__image {
+    height: 400px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+
 }

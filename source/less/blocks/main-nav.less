@@ -13,11 +13,17 @@
   overflow: hidden;
   white-space: nowrap;
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 18px;
+  right: 20px;
   width: 23px;
   height: 21px;
   background-color: #ffffff;
   background-image: url("../img/icon-menu.svg");
   background-repeat: no-repeat;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    width: 100%;
+  }
 }

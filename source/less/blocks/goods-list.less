@@ -2,30 +2,38 @@
   .font(14px, 21px);
   list-style: none;
   margin: 0;
-  padding: 40px 0;
+  padding: 32px 0px;
   display: flex;
   flex-direction: column;
 }
 
 .goods-list__item-header {
   .font(18px, 26px, #000000, bold);
-  margin-left: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .goods-list__item-details {
   padding: 0;
   margin: 0;
-  margin-left: 40px;
 }
 
 .goods-list__item {
   display: flex;
   flex-direction: column;
-  margin-bottom: 35px;
-  padding: 0 40px;
+  margin-bottom: 30px;
+  padding-right: 25px;
+  padding-left: 70px;
 
   &:last-of-type {
-    margin-bottom: 0;
+    margin-top: -2px;
+    margin-bottom: 5px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .goods-list {
+    flex-direction: row;
+    box-sizing: border-box;
+    min-height: 330px;
   }
 }

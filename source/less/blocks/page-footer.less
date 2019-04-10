@@ -4,13 +4,15 @@
   align-items: center;
   justify-content: space-between;
   padding: 25px;
-  min-height: 240px;
+  padding-top: 35px;
+  min-height: 183px;
+  margin: 0 auto;
+  width: @mobile-width;
 }
 
 .page-footer__hashtag {
   .font(21px, 26px, #000000, bold);
   margin: 0;
-  margin-top: 25px;
 }
 
 .page-footer__developer-link {
@@ -21,3 +23,21 @@
 .page-footer__social {
   margin: 0;
 }
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    box-sizing: border-box;
+    width: @tablet-width;
+    flex-direction: row;
+    padding: 10px 60px;
+    min-height: 120px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    width: @desktop-width;
+    padding: 10px 120px;
+  }
+}
+
