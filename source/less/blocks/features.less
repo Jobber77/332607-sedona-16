@@ -2,6 +2,20 @@
   margin: 0;
   padding: 40px 30px;
   padding-bottom: 10px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -32px;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    min-height: 32px;
+    background-image: url("../img/bg-triangle.svg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
 }
 
 .features__header {
@@ -25,6 +39,10 @@
     padding-bottom: 50px;
     box-sizing: border-box;
     min-height: 205px;
+
+    &::after {
+      content: none;
+    }
   }
 
   .features__header {
