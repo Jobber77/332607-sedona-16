@@ -1,5 +1,5 @@
 .photos__intro {
-  padding: 30px 25px;
+  padding: 28px 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,6 +9,7 @@
   .font(18px, 26px, #000000, bold);
   margin: 0;
   margin-top: 10px;
+  margin-bottom: 26px;
   padding: 0;
   text-align: center;
 }
@@ -16,7 +17,6 @@
 .photos__intro-text {
   .font(14px, 24px);
   margin: 0;
-  margin-top: 20px;
   padding: 0;
   text-align: center;
 }
@@ -30,11 +30,13 @@
 @media (min-width: @tablet-width) {
   .photos__intro {
     .font(14px, 24px);
-    padding: 60px;
+    padding: 65px 170px;
+    padding-bottom: 45px;
   }
 
   .photos__header {
     .font(30px, 26px, #000000, bold);
+    margin-bottom: 30px;
   }
 
   .photos__list {
@@ -54,9 +56,10 @@
 
 @media (min-width: @desktop-width) {
   .photos__intro {
-    padding: 75px;
+    padding-top: 92px;
     padding-left: 385px;
     padding-right: 385px;
+    padding-bottom: 46px;
   }
 
   .photos__header {
