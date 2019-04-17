@@ -13,7 +13,7 @@
   display: none;
 }
 
-@media (max-width: @tablet-width) {
+@media (max-width: (@tablet-width - 1)) {
   .main-nav__toggle {
     display: block;
     border: none;
@@ -27,7 +27,11 @@
     right: 20px;
     width: 23px;
     height: 21px;
-    background-color: #ffffff;
+    background-color: transparent;
+    background-image: url("../img/icon-menu.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 
   .main-nav__toggle-burger {
@@ -39,19 +43,10 @@
       display: block;
     }
 
-    .main-nav__toggle-burger {
-      display: none;
-    }
-
-    .main-nav__toggle-close {
-      display: block;
-      fill: #ffffff;
-    }
-
     .main-nav__toggle {
       top: 17px;
       right: 20px;
-      background-color: @blue;
+      background-image: url("../img/icon-cross.svg");
     }
   }
 
