@@ -7,8 +7,10 @@
 }
 
 .site-navigation__link {
+  display: block;
   color: #ffffff;
   text-decoration: none;
+  background-color: transparent;
 }
 
 .site-navigation__item {
@@ -30,14 +32,6 @@
   &:hover {
     background-color: @blue-hover;
   }
-
-  &:active {
-    background-color: @blue-down;
-  }
-}
-
-.site-navigation__link {
-  display: block;
 
   &:active {
     background-color: @blue-down;
@@ -102,11 +96,11 @@
       padding-left: 11px;
     }
 
-    &:hover {
+    &:active {
       background-color: transparent;
     }
-  
-    &:active {
+
+    &:hover {
       background-color: transparent;
     }
   }
