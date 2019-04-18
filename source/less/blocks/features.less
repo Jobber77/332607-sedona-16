@@ -1,8 +1,10 @@
 .features__intro {
   margin: 0;
   padding: 40px 30px;
-  padding-bottom: 9px;
+  padding-bottom: 0;
   position: relative;
+  min-height: 207px;
+  box-sizing: border-box;
 }
 
 .features__header {
@@ -38,8 +40,9 @@
 @media (min-width: @tablet-width) {
   .features__intro {
     padding: 47px 139px;
-    padding-bottom: 49px;
+    padding-bottom: 10px;
     box-sizing: border-box;
+    min-height: 204px;
 
     &::after {
       display: none;
