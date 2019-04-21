@@ -35,30 +35,30 @@
     background-size: contain;
     background-repeat: no-repeat;
   }
-}
 
-.goods-list__item--house::before {
-  height: 37px;
-  width: 36px;
-  left: 22px;
-  top: -9px;
-  background-image: url("../img/icon-house.svg");
-}
+  &--house::before {
+    height: 37px;
+    width: 36px;
+    left: 22px;
+    top: -9px;
+    background-image: url("../img/icon-house.svg");
+  }
 
-.goods-list__item--souvenirs::before {
-  height: 38px;
-  width: 32px;
-  left: 24px;
-  top: -11px;
-  background-image: url("../img/icon-gift.svg");
-}
+  &--souvenirs::before {
+    height: 38px;
+    width: 32px;
+    left: 24px;
+    top: -11px;
+    background-image: url("../img/icon-gift.svg");
+  }
 
-.goods-list__item--food::before {
-  height: 35px;
-  width: 40px;
-  left: 18px;
-  top: -5px;
-  background-image: url("../img/icon-burger.svg");
+  &--food::before {
+    height: 35px;
+    width: 40px;
+    left: 18px;
+    top: -5px;
+    background-image: url("../img/icon-burger.svg");
+  }
 }
 
 .goods-list__item-details br {
@@ -92,43 +92,43 @@
       position: static;
       margin-bottom: 25px;
     }
+
+    &--house {
+      padding-top: 25px;
+      order: 1;
+
+      &::before {
+        width: 75px;
+        height: 72px;
+      }
+    }
+
+    &--souvenirs {
+      padding-top: 23px;
+      order: 3;
+
+      &::before {
+        width: 64px;
+        height: 75px;
+      }
+    }
+
+    &--food {
+      padding-top: 29px;
+      order: 2;
+      padding-left: 50px;
+      padding-right: 50px;
+
+      &::before {
+        width: 77px;
+        height: 68px;
+      }
+    }
   }
 
   .goods-list__item-header {
     font-size: 21px;
     margin-bottom: 24px;
-  }
-
-  .goods-list__item--house {
-    padding-top: 25px;
-    order: 1;
-
-    &::before {
-      width: 75px;
-      height: 72px;
-    }
-  }
-
-  .goods-list__item--souvenirs {
-    padding-top: 23px;
-    order: 3;
-
-    &::before {
-      width: 64px;
-      height: 75px;
-    }
-  }
-
-  .goods-list__item--food {
-    padding-top: 29px;
-    order: 2;
-    padding-left: 50px;
-    padding-right: 50px;
-
-    &::before {
-      width: 77px;
-      height: 68px;
-    }
   }
 
   .goods-list__item-details {

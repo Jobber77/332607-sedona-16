@@ -1,9 +1,10 @@
 html {
   box-sizing: border-box;
 }
-*, 
-*::before, 
-*::after { 
+
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -16,6 +17,29 @@ body {
   background-color: white;
   padding: 0;
   margin: 0;
+}
+
+.no-js {
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__list {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .no-js {
+    .main-nav__list {
+      flex-direction: row;
+    }
+
+    .main-nav__toggle {
+      display: none;
+    }
+  }
 }
 
 @media (min-width: @desktop-width) {
