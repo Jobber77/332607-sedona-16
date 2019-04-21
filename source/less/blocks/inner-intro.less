@@ -1,13 +1,14 @@
 .inner-intro {
   border: none;
   margin: 0;
-  padding: 50px 20px 67px;
+  padding: 50px 20px;
   background-color: #61656c;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-size: 240%;
   background-position: bottom;
   position: relative;
+  min-height: 157px;
 
   &::after {
     content: "";
@@ -36,7 +37,6 @@
     min-height: 290px;
     background-size: 133%;
     padding-top: 94px;
-    padding-bottom: 67px;
 
     &::after {
       width: 91%;
@@ -73,7 +73,7 @@
 @media (min-width: @desktop-width) {
   .inner-intro {
     padding-top: 102px;
-    padding-bottom: 120px;
+    min-height: 301px;
 
     &::after {
       width: 58%;
