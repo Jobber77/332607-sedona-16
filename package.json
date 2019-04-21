@@ -39,6 +39,7 @@
     "node": "8.15"
   },
   "dependencies": {
-    "editorconfig-cli": "^0.3.0"
+    "editorconfig-cli": "^0.3.0",
+    "normalize.less": "^1.0.0"
   }
 }

@@ -20,18 +20,29 @@
   color: transparent;
   overflow: hidden;
   background-color: @blue;
-  background-position: center;
-  background-repeat: no-repeat;
+  position: relative;
 
-  &--twitter {
-    background-image: url("../img/icon-twitter.svg");
+  &:hover {
+    background-color: @blue-hover;
   }
 
-  &--facebook {
-    background-image: url("../img/icon-facebook.svg");
+  &:active {
+    background-color: @blue-down;
   }
+}
 
-  &--youtube {
-    background-image: url("../img/icon-youtube.svg");
-  }
+.page-footer__developer-link:hover .page-footer__developer-icon {
+  fill: @blue;
+}
+
+.page-footer__developer-link:active .page-footer__developer-icon {
+  fill: rgba(0, 0, 0, 0.3);
+}
+
+.social-links__icon {
+  fill: #ffffff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }

@@ -1,8 +1,8 @@
 .page-header {
-  background-color: white;
   padding: 0;
   margin: 0 auto;
   width: @mobile-width;
+  background-color: #ffffff;
 }
 
 .page-header__wrapper {
@@ -43,18 +43,14 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
-    background: url("../img/logo-sedona-tablet.svg") no-repeat;
     width: 102px;
     height: 83px;
-  }
-
-  .page-header__logo-image {
-    display: none;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-header {
     width: @desktop-width;
+    box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
   }
 }
