@@ -1,0 +1,128 @@
+.player {
+  display: flex;
+  flex-direction: column;
+}
+
+.player__preview {
+  min-height: 201px;
+  background-image: url("../img/video-mobile@1x.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.player__controls {
+  min-height: 66px;
+  padding: 0 23px;
+  background-color: #f2f2f2;
+  width: 280px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.player__seek-control {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 45px;
+  transform: translateY(-100%);
+  background-color: rgba(0, 0, 0, 0.6);
+
+  &::before {
+    content: "";
+    width: 235px;
+    height: 3px;
+    margin: 22px auto 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    display: block;
+  }
+
+  &::after {
+    content: "";
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    position: absolute;
+    top: calc(50% + 1px);
+    left: 58px;
+    transform: translateY(-50%);
+  }
+}
+
+.player__control-icon {
+  fill: #5c6870;
+}
+
+.player__replay-icon {
+  margin-left: 2px;
+}
+
+.player__subtitles-icon {
+  margin-left: auto;
+}
+
+.player__fullscreen-icon {
+  margin-left: 31px;
+}
+
+@media (min-width: @tablet-width) {
+  .player__container {
+    position: relative;
+  }
+
+  .player__preview {
+    min-height: 499px;
+  }
+
+  .player__controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 93px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0 35px;
+  }
+
+  .player__seek-control {
+    position: static;
+    width: 389px;
+    height: auto;
+    background-color: transparent;
+    transform: none;
+    align-self: stretch;
+    margin-left: auto;
+
+    &::before {
+      width: 100%;
+      margin-top: 45px;
+    }
+
+    &::after {
+      left: 205px;
+      top: 50%;
+    }
+  }
+
+  .player__control-icon {
+    fill: #ffffff;
+  }
+
+  .player__fullscreen-icon {
+    margin-right: 6px;
+  }
+
+  .player__replay-icon {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .player__seek-control {
+    width: 540px;
+  }
+}
