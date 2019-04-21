@@ -1,16 +1,52 @@
 .search-hotel {
   min-height: 637px;
-  background: tomato;
+  padding: 30px 20px;
+}
+
+.search-hotel__intro {
+  min-height: 287px;
+}
+
+.search-hotel__header {
+  .font(21px, 26px, #000000, bold);
+  margin: 0;
+  width: 260px;
+}
+
+.search-hotel__details {
+  .font(14px, 24px, #333333);
+  margin: 0;
+  width: 260px;
+}
+
+.search-hotel__link {
+  display: block;
+  width: 280px;
+  min-height: 58px;
+  padding: 16px 10px;
+  text-align: center;
+}
+
+.search-hotel__map {
+  height: 350px;
 }
 
 @media (min-width: @tablet-width) {
   .search-hotel {
     min-height: 668px;
   }
+
+  .search-hotel__intro {
+    min-height: 318px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .search-hotel {
     min-height: 681px;
+  }
+
+  .search-hotel__intro {
+    min-height: 331px;
   }
 }
