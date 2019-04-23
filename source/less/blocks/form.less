@@ -1,0 +1,104 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__section-header {
+  .font(18px, 26px, #000000, bold);
+  margin: 13px auto 21px;
+}
+
+.form__section {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #e5e5e5;
+  padding: 5px 20px;
+
+  &--name {
+    min-height: 305px;
+  }
+
+  &--contacts {
+    min-height: 287px;
+
+    .form__group {
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+
+      &::after {
+        content: "";
+        width: 58px;
+        height: 58px;
+        background-color: #e6e6e6;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}
+
+.form__group {
+  display: flex;
+  margin-bottom: 20px;
+
+  &--phone::after {
+    background-image: url("../img/icon-phone.svg");
+  }
+
+  &--email::after {
+    background-image: url("../img/icon-mail.svg");
+  }
+}
+
+.form__label {
+  .font(14px, 26px);
+  align-self: center;
+
+  &[for="phone"],
+  &[for="email"] {
+    margin-left: 21px;
+    margin-bottom: 7px;
+    width: 100%;
+  }
+}
+
+.form__input {
+  background-color: #f2f2f2;
+  border: none;
+
+  &--text {
+    .font(18px, 26px, #000000, bold);
+    height: 58px;
+    text-transform: none;
+    padding: 0 22px;
+    min-width: 192px;
+
+    &[name="name"] {
+      margin-left: 14px;
+    }
+
+    &[name="surname"] {
+      margin-left: 13px;
+    }
+
+    &[name="patronymic"] {
+      margin-left: 16px;
+    }
+
+    &::placeholder {
+      color: #000000;
+    }
+  }
+
+  &--phone,
+  &--email {
+    width: 222px;
+    flex-shrink: 1;
+  }
+}
+
+@media (min-width: @tablet-width) {
+}
+
+@media (min-width: @desktop-width) {
+}
