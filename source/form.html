@@ -45,6 +45,59 @@
       <section class="inner-intro">
         <img src="img/text-sedona.svg" alt="Sedona" class="inner-intro__image-text">
       </section>
+      <section class="feedback">
+        <div class="feedback_intro">
+            <h1 class="feedback__header">Оставьте свой отзыв</h1>
+            <p class="feedback__intro-text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+        </div>
+        <form class="feedback__form form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="form__section form__section--name">
+            <h2 class="form__section-header">Представьтесь</h2>
+            <div class="form__group">
+              <label for="name" class="form__label form__label--text">Имя*:</label>
+              <input class="form__input form__input--text" required type="text" name="name" id="name" placeholder="Петр">
+            </div>
+            <div class="form__group">
+              <label for="negative" class="form__label form__label--text">Фамилия*:</label>
+              <input class="form__input form__input--text" required type="text" name="surname" id="surname" placeholder="Иванов">
+            </div>
+            <div class="form__group">
+              <label for="no-opinion" class="form__label form__label--text">Отчество</label>
+              <input class="form__input form__input--text" type="text" name="patronymic" id="patronymic" placeholder="Александрович">
+            </div>
+          </div>
+          <div class="form__section form__section--contacts">
+            <h2 class="form__section-header">Контактная информация:</h2>
+            <div class="form__group form__group--phone">
+              <label for="name" class="form__label form__label--text">Контактный телефон*:</label>
+              <input class="form__input form__input--text form__input--phone" required type="number" name="name" id="name" placeholder="Введите телефон">
+            </div>
+            <div class="form__group form__group--email">
+              <label for="negative" class="form__label form__label--text">Электронная почта*:</label>
+              <input class="form__input form__input--text form__input--email" required type="email" name="surname" id="surname" placeholder="Введите e-mail">
+            </div>
+          </div>
+          <div class="form__section form__section--visited-places">
+            <h2 class="form__section-header">Посещенные достопримечательности:</h2>
+            <input class="form__input form__input--checkbox" type="checkbox" name="devil-bridge" id="devil-bridge">
+            <label for="devil-bridge" class="form__label form__label--checkbox">Мост Дьявола</label>
+            <input class="form__input form__input--checkbox" type="checkbox" name="bell-mountain" id="bell-mountain">
+            <label for="bell-mountain" class="form__label form__label--checkbox">Гора-Колокол</label>
+            <input class="form__input form__input--checkbox" type="checkbox" name="slade-park" id="slade-park">
+            <label for="slade-park" class="form__label form__label--checkbox">Слайд-Парк</label>
+            <input class="form__input form__input--checkbox" type="checkbox" name="red-mountains" id="red-mountains">
+            <label for="red-mountains" class="form__label form__label--checkbox">Красные Скалы</label>
+          </div>
+          <div class="form__section form__section--visited-places">
+            <h2 class="form__section-header">Опишите свои эмоции:</h2>
+            <textarea class="form__input form__input--textarea" placeholder="Опишите подробно все свои восторги" name="emotions" id="emotions"></textarea>
+          </div>
+          <div class="form__section form__section--submit">
+            <input type="submit" class="button form__input--sumbit" value="Отправить отзыв">
+            <span class="form__required-caption">* - Обязательные поля</span>
+          </div>
+        </form>
+      </section>
     </main>
     <footer class="page-footer">
         <span class="page-footer__hashtag">#visitsedona</span>
