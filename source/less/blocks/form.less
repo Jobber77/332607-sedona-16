@@ -6,6 +6,7 @@
 .form__section-header {
   .font(18px, 26px, #000000, bold);
   margin: 13px auto 21px;
+  text-align: center;
 }
 
 .form__section {
@@ -35,6 +36,27 @@
       }
     }
   }
+
+  &--impression {
+    min-height: 289px;
+  }
+
+  &--visited-places {
+    min-height: 409px;
+  }
+
+  &--emotions {
+    min-height: 260px;
+
+    .form__section-header {
+      margin-bottom: 17px;
+    }
+  }
+
+  &--submit {
+    border: none;
+    min-height: 108px;
+  }
 }
 
 .form__group {
@@ -59,6 +81,52 @@
     margin-left: 21px;
     margin-bottom: 7px;
     width: 100%;
+  }
+
+  &--radio,
+  &--checkbox {
+    .font(18px, 26px, #000000, bold);
+    text-transform: none;
+    align-self: flex-start;
+    margin: 15px 0 28px 78px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: #f2f2f2;
+    }
+  }
+
+  &--radio {
+    &::before {
+      left: -77px;
+      top: -11px;
+      height: 53px;
+      width: 53px;
+      border-radius: 50%;
+      border: 16px solid #f2f2f2;
+    }
+  }
+
+  &--checkbox {
+    margin-bottom: 44px;
+    margin-top: 10px;
+
+    &::before {
+      left: -78px;
+      top: -13px;
+      height: 55px;
+      width: 55px;
+      border-radius: 5%;
+      border: 16px solid #f2f2f2;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -95,6 +163,49 @@
     width: 222px;
     flex-shrink: 1;
   }
+
+  &--radio {
+    display: none;
+  
+    &:checked + .form__label::before {
+        background-color: #000000;
+    }
+  }
+
+  &--checkbox {
+    display: none;
+
+    &:checked + .form__label::before {
+      background-image: url("../img/icon-tick.svg");
+    }
+  }
+
+  &--textarea {
+    .font(18px, 26px, #000000, bold);
+    text-transform: none;
+    width: 100%;
+    margin: none;
+    padding: 15px 20px;
+    resize: none;
+    height: 160px;
+
+    &::placeholder {
+      .font(18px, 26px, #000000, bold);
+      text-transform: none;
+    }
+  }
+
+  &--sumbit {
+    .font(21px, 26px, #ffffff, bold);
+    text-transform: uppercase;
+    border: none;
+    margin-top: 9px;
+    height: 58px;
+  }
+}
+
+.form__required-caption {
+  display: none;
 }
 
 @media (min-width: @tablet-width) {
