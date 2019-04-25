@@ -166,9 +166,9 @@
 
   &--radio {
     display: none;
-  
+
     &:checked + .form__label::before {
-        background-color: #000000;
+      background-color: #000000;
     }
   }
 
@@ -241,7 +241,7 @@
         margin: 29px 0 25px;
         display: flex;
         justify-content: space-between;
-        
+
         &::before,
         &::after {
           content: "";
@@ -251,6 +251,14 @@
           top: 52px;
           align-self: center;
         }
+      }
+    }
+
+    &--contacts {
+      min-height: 327px;
+
+      .form__section-wrapper {
+        padding: 0;
       }
     }
 
@@ -283,6 +291,7 @@
         align-self: center;
         margin-top: 11px;
         margin-bottom: 36px;
+        width: 100%;
       }
     }
 
@@ -322,6 +331,7 @@
 
     &--checkbox {
       margin: 20px 0 42px 80px;
+
       &[for="bell-mountain"] {
         margin-right: 12px;
       }
@@ -331,11 +341,11 @@
   .form__input {
     &--text {
       min-width: 178px;
-  
+
       &[name="surname"] {
         margin-left: 15px;
       }
-  
+
       &[name="patronymic"] {
         margin-left: 18px;
       }
@@ -367,7 +377,94 @@
     align-self: center;
     margin-bottom: 10px;
   }
+
+  .form__group {
+    &--phone,
+    &--email {
+      min-height: 104px;
+    }
+  }
 }
 
 @media (min-width: @desktop-width) {
+  .form__section {
+    &--name {
+      padding-left: 79px;
+      padding-right: 120px;
+    }
+
+    &--impression {
+      padding-left: 120px;
+    }
+
+    &--contacts {
+      min-height: 210px;
+      padding-left: 120px;
+      padding-right: 120px;
+
+      .form__section-header {
+        margin-top: 27px;
+        margin-bottom: 51px;
+      }
+    }
+
+    &--contacts,
+    &--visited-places,
+    &--emotions {
+      .form__section-header {
+        &::before,
+        &::after {
+          width: 280px;
+        }
+      }
+    }
+
+    &--visited-places {
+      padding-left: 120px;
+      padding-right: 120px;
+    }
+  }
+
+  .form__input {
+    &--text {
+      width: 350px;
+    }
+
+    &--phone,
+    &--email {
+      width: 258px;
+      margin-bottom: 0;
+    }
+  }
+
+  .form__label {
+    &--radio {
+      margin-left: 79px;
+    }
+  }
+
+  .form__group {
+    &--phone,
+    &--email {
+      align-items: center;
+      margin-bottom: 100px;
+
+      .form__label {
+        width: auto;
+        margin-right: 16px;
+        margin-bottom: 0;
+        margin-top: 1px;
+      }
+    }
+
+    &--phone {
+      .form__label {
+        margin-left: 0;
+      }
+    }
+
+    span {
+      display: none;
+    }
+  }
 }
