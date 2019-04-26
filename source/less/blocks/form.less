@@ -7,6 +7,10 @@
   .font(18px, 26px, #000000, bold);
   margin: 13px auto 21px;
   text-align: center;
+
+  &--emotions {
+    margin-bottom: 17px;
+  }
 }
 
 .form__section {
@@ -21,20 +25,6 @@
 
   &--contacts {
     min-height: 287px;
-
-    .form__group {
-      flex-wrap: wrap;
-      margin-bottom: 10px;
-
-      &::after {
-        content: "";
-        width: 58px;
-        height: 58px;
-        background-color: #e6e6e6;
-        background-position: center;
-        background-repeat: no-repeat;
-      }
-    }
   }
 
   &--impression {
@@ -47,10 +37,6 @@
 
   &--emotions {
     min-height: 260px;
-
-    .form__section-header {
-      margin-bottom: 17px;
-    }
   }
 
   &--submit {
@@ -62,6 +48,20 @@
 .form__group {
   display: flex;
   margin-bottom: 20px;
+
+  &--contacts {
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+
+    &::after {
+      content: "";
+      width: 58px;
+      height: 58px;
+      background-color: #e6e6e6;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
 
   &--phone::after {
     background-image: url("../img/icon-phone.svg");
@@ -76,8 +76,7 @@
   .font(14px, 26px);
   align-self: center;
 
-  &[for="phone"],
-  &[for="email"] {
+  &--contacts {
     margin-left: 21px;
     margin-bottom: 7px;
     width: 100%;
@@ -128,11 +127,41 @@
       margin-bottom: 0;
     }
   }
+
+  &--radio:hover::before,
+  &--checkbox:hover::before {
+    background-color: @gray-form-input-hover;
+    border-color: @gray-form-input-hover;
+  }
+
+  &--radio:active::before,
+  &--checkbox:active::before {
+    background-color: @gray-form-input-down;
+    border-color: @gray-form-input-down;
+  }
 }
 
 .form__input {
   background-color: #f2f2f2;
   border: none;
+
+  &--checkbox,
+  &--radio,
+  &--text,
+  &--textarea {
+    &:hover {
+      background-color: @gray-form-input-hover;
+    }
+  }
+
+  &--text,
+  &--textarea {
+    &:focus {
+      background-color: #ffffff;
+      outline: 3px solid @gray-form-input-hover;
+      outline-offset: -3px;
+    }
+  }
 
   &--text {
     .font(18px, 26px, #000000, bold);
@@ -170,12 +199,21 @@
     &:checked + .form__label::before {
       background-color: #000000;
     }
+    
+    &:checked:active + .form__label::before {
+      background-color: rgba(0, 0, 0, 0.3)
+    }
   }
 
   &--checkbox {
     display: none;
 
     &:checked + .form__label::before {
+      background-image: url("../img/icon-tick.svg");
+    }
+
+    &:checked:active + .form__label::before {
+      /* TO-DO: use svg sprite here to put svg with opacity */
       background-image: url("../img/icon-tick.svg");
     }
   }
@@ -195,7 +233,7 @@
     }
   }
 
-  &--sumbit {
+  &--submit {
     .font(21px, 26px, #ffffff, bold);
     text-transform: uppercase;
     border: none;
@@ -236,40 +274,16 @@
       width: 100%;
       padding-left: 60px;
       padding-right: 60px;
-
-      .form__section-header {
-        margin: 29px 0 25px;
-        display: flex;
-        justify-content: space-between;
-
-        &::before,
-        &::after {
-          content: "";
-          width: 125px;
-          height: 1px;
-          background-color: #f2f2f2;
-          top: 52px;
-          align-self: center;
-        }
-      }
     }
 
     &--contacts {
       min-height: 327px;
-
-      .form__section-wrapper {
-        padding: 0;
-      }
     }
 
     &--name {
       padding-left: 57px;
       padding-right: 59px;
       position: relative;
-
-      .form__section-header {
-        margin-left: 0;
-      }
 
       &::before {
         content: "";
@@ -286,20 +300,6 @@
       width: 100%;
       flex-wrap: wrap;
       min-height: 290px;
-
-      .form__section-header {
-        align-self: center;
-        margin-top: 11px;
-        margin-bottom: 36px;
-        width: 100%;
-      }
-    }
-
-    &--emotions {
-      .form__section-header {
-        margin-top: 23px;
-        margin-bottom: 57px;
-      }
     }
 
     &--submit {
@@ -317,6 +317,46 @@
     line-height: 26px;
     margin-top: 39px;
     margin-bottom: 58px;
+
+    &--contacts,
+    &--visited-places,
+    &--emotions {
+      margin-left: 0;
+      margin-right: 0;
+      display: flex;
+      justify-content: space-between;
+
+      &::before,
+      &::after {
+        content: "";
+        width: 125px;
+        height: 1px;
+        background-color: #f2f2f2;
+        top: 52px;
+        align-self: center;
+      }
+    }
+
+    &--emotions {
+      margin-top: 23px;
+      margin-bottom: 57px;
+    }
+
+    &--visited-places {
+      align-self: center;
+      margin-top: 11px;
+      margin-bottom: 36px;
+      width: 100%;
+    }
+
+    &--contacts {
+      margin-top: 29px;
+      margin-bottom: 25px;
+    }
+
+    &--name {
+      margin-left: 0;
+    }
   }
 
   .form__label {
@@ -357,7 +397,7 @@
       margin-bottom: 12px;
     }
 
-    &--sumbit {
+    &--submit {
       margin-top: 37px;
       width: 324px;
       padding-right: 15px;
@@ -370,6 +410,10 @@
     justify-content: space-between;
     padding-left: 95px;
     padding-right: 95px;
+
+    &--contacts {
+      padding: 0;
+    }
   }
 
   .form__required-caption {
@@ -399,29 +443,46 @@
 
     &--contacts {
       min-height: 210px;
+    }
+
+    &--visited-places {
+      min-height: 200px;
+    }
+
+    &--visited-places,
+    &--contacts,
+    &--emotions,
+    &--submit {
       padding-left: 120px;
       padding-right: 120px;
+    }
 
-      .form__section-header {
-        margin-top: 27px;
-        margin-bottom: 51px;
-      }
+    &--submit {
+      min-height: 174px;
+    }
+  }
+
+  .form__section-header {
+    &--contacts {
+      margin-top: 27px;
+      margin-bottom: 51px;
     }
 
     &--contacts,
     &--visited-places,
     &--emotions {
-      .form__section-header {
         &::before,
         &::after {
           width: 280px;
         }
-      }
+    }
+
+    &--emotions {
+      margin-top: 20px;
     }
 
     &--visited-places {
-      padding-left: 120px;
-      padding-right: 120px;
+      margin-top: 9px;
     }
   }
 
@@ -435,36 +496,61 @@
       width: 258px;
       margin-bottom: 0;
     }
+
+    &--textarea {
+      padding-top: 17px;
+    }
+
+    &--submit {
+      width: 480px;
+      margin-top: 39px;
+      padding-left: 15px;
+    }
   }
 
   .form__label {
     &--radio {
       margin-left: 79px;
     }
+
+    &--contacts {
+      width: auto;
+      margin-right: 16px;
+      margin-bottom: 0;
+      margin-top: 1px;
+    }
+
+    &[for="phone"] {
+      margin-left: 0;
+    }
+
+    &[for="bell-mountain"] {
+      margin-right: 0;
+    }
+
+    &[for="red-mountains"] {
+      margin-right: 5px;
+    }
   }
 
   .form__group {
-    &--phone,
-    &--email {
+    &--contacts {
       align-items: center;
-      margin-bottom: 100px;
-
-      .form__label {
-        width: auto;
-        margin-right: 16px;
-        margin-bottom: 0;
-        margin-top: 1px;
-      }
-    }
-
-    &--phone {
-      .form__label {
-        margin-left: 0;
-      }
+      margin-bottom: 0;
     }
 
     span {
       display: none;
     }
+  }
+  
+  .form__section-wrapper {
+    &--visited-places {
+      padding:0;
+    }
+  }
+
+  .form__required-caption {
+    margin-bottom: 13px;
   }
 }

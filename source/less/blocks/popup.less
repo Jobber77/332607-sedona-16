@@ -1,0 +1,150 @@
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: #ffffff;
+    width: 320px;
+    box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
+    padding: 42px 0 0;
+
+    &--success {
+        min-height: 323px;
+    }
+
+    &--error {
+        min-height: 280px;
+    }
+}
+
+.popup__header {
+    .font(18px, 26px, #000000, bold);
+    margin: 0 auto;
+    text-align: center;
+    width: 214px;
+
+    &--success {
+        margin-bottom: 35px;
+    }
+
+    &--error {
+        margin-bottom: 25px;
+    }
+}
+
+.popup__text {
+    .font(14px, 24px);
+    margin: 0 auto;
+    text-align: center;
+    width: 214px;
+
+    &--success {
+       margin-bottom: 33px;
+    }
+    
+    &--error {
+        margin-bottom: 25px;
+    }
+}
+
+.popup__button-wrapper {
+    display: flex;
+    &--success {
+        min-height: 98px;
+        background-color: #f2f2f2;
+    }
+
+    &--error {
+        min-height: 93px;
+    }
+}
+
+.popup__button {
+    .font(18px, 26px, #ffffff);
+    text-transform: uppercase;
+    text-align: center;
+    border: none;
+    height: 58px;
+    
+    &--success {
+        width: 280px;
+        margin: 20px auto;
+    }
+
+    &--error {
+        width: 180px;
+        margin: 0 auto;
+    }
+}
+
+.popup--hidden {
+    display: none;
+}
+
+@media (min-width: @tablet-width) {
+    .popup {
+        &--success {
+            min-height: 347px;
+            width: 640px;
+        }
+    
+        &--error {
+            min-height: 347px;
+            width: 400px;
+        }
+    }
+
+    .popup__button-wrapper {
+        &--success {
+            min-height: 146px;
+        }
+    
+        &--error {
+            min-height: 107px;
+        }
+    }
+
+    .popup__button {
+        font-size: 21px;
+
+        &--success {
+            width: 458px;
+            margin: 44px auto;
+        }
+    
+        &--error {
+            width: 272px;
+            margin: 0 auto;
+        }
+    }
+
+    .popup__text {
+        &--success {
+            width: 414px;
+            margin-bottom: 36px;
+        }
+        
+        &--error {
+            width: 277px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .popup__header {
+        font-size: 30px;
+        line-height: 40px;
+
+        &--success {
+            width: 414px;
+        }
+    
+        &--error {
+            width: 237px;
+            margin-top: 15px;
+        }
+    }
+}
+  
+@media (min-width: @desktop-width) {
+}
+  
