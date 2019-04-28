@@ -112,15 +112,22 @@
     margin-bottom: 44px;
     margin-top: 10px;
 
-    &::before {
+    &::before,
+    &::after {
       left: -78px;
       top: -13px;
       height: 55px;
       width: 55px;
       border-radius: 5%;
-      border: 16px solid #f2f2f2;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
       background-repeat: no-repeat;
       background-position: center;
+      background-image: url("../img/icon-tick.svg");
+      display: none;
     }
 
     &:last-of-type {
@@ -208,13 +215,13 @@
   &--checkbox {
     display: none;
 
-    &:checked + .form__label::before {
-      background-image: url("../img/icon-tick.svg");
+    &:checked + .form__label::after {
+      display: block;
     }
 
-    &:checked:active + .form__label::before {
-      /* TO-DO: use svg sprite here to put svg with opacity */
-      background-image: url("../img/icon-tick.svg");
+    &:checked:active + .form__label::after {
+      display: block;
+      opacity: 0.3;
     }
   }
 
