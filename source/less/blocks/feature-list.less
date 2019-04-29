@@ -6,7 +6,6 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  min-height: 503px;
 }
 
 .feature-list__item {
@@ -17,13 +16,8 @@
   margin: 0;
   padding: 27px 15px;
   padding-bottom: 5px;
-  min-height: 167px;
   box-sizing: border-box;
   border-bottom: 1px solid #d6d6d6;
-
-  &:nth-of-type(2) {
-    min-height: 168px;
-  }
 
   &:last-of-type {
     border-bottom: none;
@@ -46,12 +40,12 @@
 .feature-list__item-details {
   margin: 0;
   padding: 0;
+  margin-bottom: 22px;
 }
 
 @media (min-width: @tablet-width) {
   .feature-list {
     flex-direction: row;
-    min-height: 256px;
     padding: 25px 0;
   }
 
@@ -72,6 +66,10 @@
   .feature-list__item-number {
     margin-bottom: 22px;
   }
+
+  .feature-list__item-details {
+    margin-bottom: 8px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -81,5 +79,9 @@
 
   .feature-list__item-header {
     padding: 0 80px;
+  }
+
+  .feature-list__item-details {
+    margin-bottom: 29px;
   }
 }
