@@ -68,6 +68,15 @@
   display: none;
 }
 
+.form__submit {
+  .font(21px, 26px, #ffffff, bold);
+  text-transform: uppercase;
+  border: none;
+  margin-top: 9px;
+  height: 58px;
+  margin-bottom: 31px;
+}
+
 @media (min-width: @tablet-width) {
   .form {
     flex-direction: row;
@@ -199,6 +208,13 @@
       min-height: 104px;
     }
   }
+
+  .form__submit {
+    margin-top: 37px;
+    margin-bottom: 52px;
+    width: 324px;
+    padding-right: 15px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -268,5 +284,12 @@
 
   .form__required-caption {
     margin-bottom: 13px;
+  }
+
+  .form__submit {
+    width: 480px;
+    margin-top: 39px;
+    margin-bottom: 57px;
+    padding-left: 15px;
   }
 }
