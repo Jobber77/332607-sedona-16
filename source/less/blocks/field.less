@@ -42,9 +42,8 @@
   .font(14px, 26px);
   align-self: center;
 
-  &--contacts {
-    margin-left: 21px;
-    margin-bottom: 7px;
+  &[for="phone"],
+  &[for="email"] {
     width: 100%;
   }
 }
@@ -81,15 +80,9 @@
   }
 
   .field__label {
-    &--contacts {
+    &[for="phone"],
+    &[for="email"] {
       width: auto;
-      margin-right: 16px;
-      margin-bottom: 0;
-      margin-top: 1px;
-    }
-
-    &[for="phone"] {
-      margin-left: 0;
     }
   }
 }
