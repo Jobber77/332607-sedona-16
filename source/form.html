@@ -55,29 +55,29 @@
             <p class="feedback__intro-text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         </div>
         <form class="feedback__form form" action="https://echo.htmlacademy.ru" method="post">
-          <div class="form__section form__section--name field">
+          <div class="form__section form__section--name">
             <h2 class="form__section-header form__section-header--name">Представьтесь:</h2>
-            <div class="form__group">
+            <div class="form__group field">
               <label for="firstName" class="field__label">Имя*:</label>
               <input class="field__input" required type="text" name="firstName" id="firstName" placeholder="Петр">
             </div>
-            <div class="form__group">
+            <div class="form__group field">
               <label for="lastName" class="field__label form__label--field">Фамилия*:</label>
               <input class="field__input" required type="text" name="lastName" id="lastName" placeholder="Иванов">
             </div>
-            <div class="form__group">
-              <label for="no-opinion" class="field__label form__label--field">Отчество:</label>
+            <div class="form__group field">
+              <label for="patronymic" class="field__label form__label--field">Отчество:</label>
               <input class="field__input" type="text" name="patronymic" id="patronymic" placeholder="Александрович">
             </div>
           </div>
-          <div class="form__section form__section--contacts field">
+          <div class="form__section form__section--contacts">
             <h2 class="form__section-header form__section-header--contacts">Контактная информация:</h2>
-            <div class="form__section-wrapper form__section-wrapper--contacts ">
-              <div class="form__group form__group--contacts form__group--phone">
+            <div class="form__section-wrapper form__section-wrapper--contacts">
+              <div class="form__group form__group--contacts form__group--phone field">
                 <label for="phone" class="field__label form__label--field"><span>Контактный </span>телефон*:</label>
                 <input class="field__input field__input--phone" required type="tel" name="phone" id="phone" placeholder="Введите телефон">
               </div>
-              <div class="form__group form__group--contacts form__group--email">
+              <div class="form__group form__group--contacts form__group--email field">
                 <label for="email" class="field__label form__label--field">Электронная почта*:</label>
                 <input class="field__input field__input--email" required type="email" name="email" id="email" placeholder="Введите e-mail">
               </div>
@@ -93,8 +93,8 @@
             <label for="neutral" class="radio__label form__label--radio">Затрудняюсь ответить</label>
           </div>
           <div class="form__section form__section--visited-places">
-            <h2 class="form__section-header form__section-header--visited-places checkbox">Посещенные достопримечательности:</h2>
-            <div class="form__section-wrapper form__section-wrapper--visited-places">
+            <h2 class="form__section-header form__section-header--visited-places">Посещенные достопримечательности:</h2>
+            <div class="form__section-wrapper form__section-wrapper--visited-places checkbox">
               <input class="checkbox__input" type="checkbox" name="devilBridge" id="devilBridge" checked>
               <label for="devilBridge" class="checkbox__label form__label--checkbox">Мост Дьявола</label>
               <input class="checkbox__input" type="checkbox" name="bellMountain" id="bellMountain" checked>
