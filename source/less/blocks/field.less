@@ -1,4 +1,4 @@
-.field__input {
+.field {
   .font(18px, 26px, #000000, bold);
   background-color: #f2f2f2;
   border: none;
@@ -38,11 +38,12 @@
   }
 }
 
-.field__label {
+.field--label {
   .font(14px, 26px);
   align-self: center;
 
-  &--contacts {
+  &[for="phone"],
+  &[for="email"] {
     margin-left: 21px;
     margin-bottom: 7px;
     width: 100%;
@@ -50,7 +51,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .field__input {
+  .field {
     min-width: 178px;
 
     &--phone,
@@ -66,7 +67,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .field__input {
+  .field {
     width: 350px;
 
     &--phone,
@@ -80,16 +81,10 @@
     }
   }
 
-  .field__label {
-    &--contacts {
+  .field--label {
+    &[for="phone"],
+    &[for="email"] {
       width: auto;
-      margin-right: 16px;
-      margin-bottom: 0;
-      margin-top: 1px;
-    }
-
-    &[for="phone"] {
-      margin-left: 0;
     }
   }
 }

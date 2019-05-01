@@ -1,4 +1,4 @@
-.checkbox__label {
+.checkbox--label {
   .font(18px, 26px, #000000, bold);
   text-transform: none;
   align-self: flex-start;
@@ -40,37 +40,15 @@
   }
 }
 
-.checkbox__input {
+.checkbox {
   display: none;
 
-  &:checked + .checkbox__label::after {
+  &:checked + .checkbox--label::after {
     display: block;
   }
 
-  &:checked:active + .checkbox__label::after {
+  &:checked:active + .checkbox--label::after {
     display: block;
     opacity: 0.3;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .checkbox__label {
-    margin: 20px 0 42px 80px;
-
-    &[for="bellMountain"] {
-      margin-right: 12px;
-    }
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .checkbox__label {
-    &[for="bellMountain"] {
-      margin-right: 0;
-    }
-
-    &[for="redMountains"] {
-      margin-right: 5px;
-    }
   }
 }
