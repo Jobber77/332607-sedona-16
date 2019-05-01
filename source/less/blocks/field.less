@@ -1,4 +1,4 @@
-.field {
+.field__input {
   .font(18px, 26px, #000000, bold);
   background-color: #f2f2f2;
   border: none;
@@ -38,7 +38,7 @@
   }
 }
 
-.field--label {
+.field__label {
   .font(14px, 26px);
   align-self: center;
 
@@ -51,7 +51,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .field {
+  .field__input {
     min-width: 178px;
 
     &--phone,
@@ -67,7 +67,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .field {
+  .field__input {
     width: 350px;
 
     &--phone,
@@ -81,7 +81,7 @@
     }
   }
 
-  .field--label {
+  .field__label {
     &[for="phone"],
     &[for="email"] {
       width: auto;

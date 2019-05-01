@@ -1,16 +1,16 @@
-.radio {
+.radio__input {
   display: none;
 
-  &:checked + .radio--label::before {
+  &:checked + .radio__label::before {
     background-color: #000000;
   }
 
-  &:checked:active + .radio--label::before {
+  &:checked:active + .radio__label::before {
     background-color: rgba(0, 0, 0, 0.3);
   }
 }
 
-.radio--label {
+.radio__label {
   .font(18px, 26px, #000000, bold);
   text-transform: none;
   align-self: flex-start;
@@ -45,7 +45,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .radio--label {
+  .radio__label {
     &::before {
       left: -74px;
       top: -12px;

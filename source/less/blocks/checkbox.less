@@ -1,4 +1,4 @@
-.checkbox--label {
+.checkbox__label {
   .font(18px, 26px, #000000, bold);
   text-transform: none;
   align-self: flex-start;
@@ -40,14 +40,14 @@
   }
 }
 
-.checkbox {
+.checkbox__input {
   display: none;
 
-  &:checked + .checkbox--label::after {
+  &:checked + .checkbox__label::after {
     display: block;
   }
 
-  &:checked:active + .checkbox--label::after {
+  &:checked:active + .checkbox__label::after {
     display: block;
     opacity: 0.3;
   }
