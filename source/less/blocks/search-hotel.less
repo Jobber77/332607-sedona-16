@@ -1,16 +1,120 @@
-.search-hotel {
-  min-height: 637px;
-  background: tomato;
+.search-hotel__intro {
+  padding: 27px 20px 10px;
+}
+
+.search-hotel__header {
+  .font(21px, 26px, #000000, bold);
+  margin: 0 auto 20px;
+  text-align: center;
+  width: 260px;
+}
+
+.search-hotel__details {
+  .font(14px, 24px, #333333);
+  margin: 0 auto 35px;
+  text-align: center;
+  width: 262px;
+
+  br {
+    display: none;
+  }
+}
+
+.search-hotel__link {
+  .font(21px, 26px, #ffffff, bold);
+  width: 280px;
+  min-height: 58px;
+  padding: 16px 10px;
+  margin: 0 auto 39px;
+}
+
+.search-hotel__map {
+  background-image:
+    url("../img/icon-map-marker.svg"),
+    url("../img/bg-map-mobile@1x.jpg");
+  background-size:
+    auto
+    cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 350px;
+}
+
+@media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+  .search-hotel__map {
+    background-image:
+      url("../img/icon-map-marker.svg"),
+      url("../img/bg-map-mobile@2x.jpg");
+  }
 }
 
 @media (min-width: @tablet-width) {
-  .search-hotel {
-    min-height: 668px;
+  .search-hotel__intro {
+    min-height: 318px;
+    padding-top: 53px;
+  }
+
+  .search-hotel__header {
+    font-size: 30px;
+    line-height: 30px;
+    width: 434px;
+    margin-bottom: 30px;
+  }
+
+  .search-hotel__details {
+    font-size: 14px;
+    line-height: 24px;
+    width: 440px;
+    margin-bottom: 41px;
+
+    br {
+      display: block;
+    }
+  }
+
+  .search-hotel__link {
+    width: 458px;
+  }
+
+  .search-hotel__map {
+    background-image:
+      url("../img/icon-map-marker.svg"),
+      url("../img/bg-map-tablet@1x.jpg");
+  }
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    .search-hotel__map {
+      background-image:
+        url("../img/icon-map-marker.svg"),
+        url("../img/bg-map-tablet@2x.jpg");
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
-  .search-hotel {
-    min-height: 681px;
+  .search-hotel__intro {
+    min-height: 331px;
+  }
+
+  .search-hotel__header {
+    margin-bottom: 28px;
+  }
+
+  .search-hotel__details {
+    margin-bottom: 47px;
+  }
+
+  .search-hotel__map {
+    background-image:
+      url("../img/icon-map-marker.svg"),
+      url("../img/bg-map-desktop@1x.jpg");
+  }
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    .search-hotel__map {
+      background-image:
+        url("../img/icon-map-marker.svg"),
+        url("../img/bg-map-desktop@2x.jpg");
+    }
   }
 }
