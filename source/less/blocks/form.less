@@ -79,8 +79,11 @@
 
 .form__label {
   &--field {
-    margin-left: 21px;
-    margin-bottom: 7px;
+    &[for="phone"],
+    &[for="email"] {
+      margin-left: 21px;
+      margin-bottom: 7px;
+    }
   }
 }
 
