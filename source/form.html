@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Форма отзыва Седона</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="/fonts/ptsans.woff2" as="font">
+    <link rel="preload" href="/fonts/ptsansbold.woff2" as="font">
   </head>
   <body>
     <div style="display: none;">
@@ -80,23 +82,23 @@
           </div>
           <div class="form__section form__section--impression radio">
             <h2 class="form__section-header form__section-header--impression">Ваше общее впечатление:</h2>
-            <input class="radio__input" type="radio" name="impression" id="positive" value="positive" checked>
+            <input class="radio__input visually-hidden" type="radio" name="impression" id="positive" value="positive" checked>
             <label for="positive" class="radio__label form__label--radio">Скорее положительное</label>
-            <input class="radio__input" type="radio" name="impression" id="negative" value="negative">
+            <input class="radio__input visually-hidden" type="radio" name="impression" id="negative" value="negative">
             <label for="negative" class="radio__label form__label--radio">Скорее отрицательное</label>
-            <input class="radio__input" type="radio" name="impression" id="neutral" value="neutral">
+            <input class="radio__input visually-hidden" type="radio" name="impression" id="neutral" value="neutral">
             <label for="neutral" class="radio__label form__label--radio">Затрудняюсь ответить</label>
           </div>
           <div class="form__section form__section--visited-places">
             <h2 class="form__section-header form__section-header--visited-places">Посещенные достопримечательности:</h2>
             <div class="form__section-wrapper form__section-wrapper--visited-places checkbox">
-              <input class="checkbox__input" type="checkbox" name="devilBridge" id="devilBridge" checked>
+              <input class="checkbox__input visually-hidden" type="checkbox" name="devilBridge" id="devilBridge" checked>
               <label for="devilBridge" class="checkbox__label form__label--checkbox">Мост Дьявола</label>
-              <input class="checkbox__input" type="checkbox" name="bellMountain" id="bellMountain" checked>
+              <input class="checkbox__input visually-hidden" type="checkbox" name="bellMountain" id="bellMountain" checked>
               <label for="bellMountain" class="checkbox__label form__label--checkbox">Гора-Колокол</label>
-              <input class="checkbox__input" type="checkbox" name="sladePark" id="sladePark" checked>
+              <input class="checkbox__input visually-hidden" type="checkbox" name="sladePark" id="sladePark" checked>
               <label for="sladePark" class="checkbox__label form__label--checkbox">Слайд-парк</label>
-              <input class="checkbox__input" type="checkbox" name="redMountains" id="redMountains">
+              <input class="checkbox__input visually-hidden" type="checkbox" name="redMountains" id="redMountains">
               <label for="redMountains" class="checkbox__label form__label--checkbox">Красные скалы</label>
             </div>
           </div>
