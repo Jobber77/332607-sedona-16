@@ -1,5 +1,14 @@
 .radio__input {
-  display: none;
+  &:hover + .radio__label::before,
+  &:focus + .radio__label::before {
+    background-color: @gray-form-input-hover;
+    border-color: @gray-form-input-hover;
+  }
+
+  &:active + .radio__label::before {
+    background-color: @gray-form-input-down;
+    border-color: @gray-form-input-down;
+  }
 
   &:checked + .radio__label::before {
     background-color: #000000;
@@ -31,16 +40,6 @@
     width: 53px;
     border-radius: 50%;
     border: 16px solid #f2f2f2;
-  }
-
-  &:hover::before {
-    background-color: @gray-form-input-hover;
-    border-color: @gray-form-input-hover;
-  }
-
-  &:active::before {
-    background-color: @gray-form-input-down;
-    border-color: @gray-form-input-down;
   }
 }
 
