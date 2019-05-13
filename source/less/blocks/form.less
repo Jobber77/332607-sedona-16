@@ -77,16 +77,6 @@
   margin-bottom: 31px;
 }
 
-.form__label {
-  &--field {
-    &[for="phone"],
-    &[for="email"] {
-      margin-left: 21px;
-      margin-bottom: 7px;
-    }
-  }
-}
-
 @media (min-width: @tablet-width) {
   .form {
     flex-direction: row;
@@ -187,6 +177,10 @@
     &--name {
       margin-left: 0;
     }
+
+    &--impression {
+      width: 275px;
+    }
   }
 
   .form__section-wrapper {
@@ -224,20 +218,6 @@
     margin-bottom: 52px;
     width: 324px;
     padding-right: 15px;
-  }
-
-  .form__label {
-    &--checkbox {
-      margin: 20px 0 42px 80px;
-
-      &[for="bellMountain"] {
-        margin-right: 12px;
-      }
-    }
-
-    &--radio {
-      margin: 15px 0 37px 76px;
-    }
   }
 }
 
@@ -315,34 +295,5 @@
     margin-top: 39px;
     margin-bottom: 57px;
     padding-left: 15px;
-  }
-
-  .form__label {
-    &--checkbox {
-      &[for="bellMountain"] {
-        margin-right: 0;
-      }
-
-      &[for="redMountains"] {
-        margin-right: 5px;
-      }
-    }
-
-    &--radio {
-      margin-left: 79px;
-    }
-
-    &--field {
-      &[for="phone"],
-      &[for="email"] {
-        margin-right: 16px;
-        margin-bottom: 0;
-        margin-top: 1px;
-      }
-
-      &[for="phone"] {
-        margin-left: 0;
-      }
-    }
   }
 }

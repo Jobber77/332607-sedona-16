@@ -1,3 +1,8 @@
+.radio {
+  display: flex;
+  flex-direction: column;
+}
+
 .radio__input {
   &:hover + .radio__label::before,
   &:focus + .radio__label::before {
@@ -45,6 +50,19 @@
 
 @media (min-width: @tablet-width) {
   .radio__label {
+    margin: 15px 0 37px 76px;
+
+    &::before {
+      left: -74px;
+      top: -12px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .radio__label {
+    margin-left: 79px;
+
     &::before {
       left: -74px;
       top: -12px;

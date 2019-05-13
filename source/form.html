@@ -20,6 +20,7 @@
             <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
             <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Sedona logo">
           </picture>
+          Sedona логотип
         </a>
         <nav class="main-nav no-js">
           <button class="main-nav__toggle" type="button">
@@ -44,7 +45,7 @@
     </header>
     <main class="page-main">
       <section class="inner-intro">
-        <img src="img/text-sedona.svg" alt="Sedona" class="inner-intro__image-text">
+        <img src="img/text-sedona.svg" alt="Sedona" class="inner-intro__image-text" width="230" height="40">
       </section>
       <section class="feedback">
         <div class="feedback__intro">
@@ -55,15 +56,15 @@
           <div class="form__section form__section--name">
             <h2 class="form__section-header form__section-header--name">Представьтесь:</h2>
             <div class="form__group field">
-              <label for="firstName" class="field__label form__label--field">Имя*:</label>
+              <label for="firstName" class="field__label">Имя*:</label>
               <input class="field__input" required type="text" name="firstName" id="firstName" placeholder="Петр">
             </div>
             <div class="form__group field">
-              <label for="lastName" class="field__label form__label--field">Фамилия*:</label>
+              <label for="lastName" class="field__label">Фамилия*:</label>
               <input class="field__input" required type="text" name="lastName" id="lastName" placeholder="Иванов">
             </div>
             <div class="form__group field">
-              <label for="patronymic" class="field__label form__label--field">Отчество:</label>
+              <label for="patronymic" class="field__label">Отчество:</label>
               <input class="field__input" type="text" name="patronymic" id="patronymic" placeholder="Александрович">
             </div>
           </div>
@@ -71,40 +72,44 @@
             <h2 class="form__section-header form__section-header--contacts">Контактная информация:</h2>
             <div class="form__section-wrapper form__section-wrapper--contacts">
               <div class="form__group form__group--contacts form__group--phone field">
-                <label for="phone" class="field__label form__label--field"><span>Контактный </span>телефон*:</label>
+                <label for="phone" class="field__label"><span>Контактный </span>телефон*:</label>
                 <input class="field__input field__input--phone" required type="tel" name="phone" id="phone" placeholder="Введите телефон">
               </div>
               <div class="form__group form__group--contacts form__group--email field">
-                <label for="email" class="field__label form__label--field">Электронная почта*:</label>
+                <label for="email" class="field__label">Электронная почта*:</label>
                 <input class="field__input field__input--email" required type="email" name="email" id="email" placeholder="Введите e-mail">
               </div>
             </div>
           </div>
-          <div class="form__section form__section--impression radio">
+          <div class="form__section form__section--impression">
             <h2 class="form__section-header form__section-header--impression">Ваше общее впечатление:</h2>
-            <input class="radio__input visually-hidden" type="radio" name="impression" id="positive" value="positive" checked>
-            <label for="positive" class="radio__label form__label--radio">Скорее положительное</label>
-            <input class="radio__input visually-hidden" type="radio" name="impression" id="negative" value="negative">
-            <label for="negative" class="radio__label form__label--radio">Скорее отрицательное</label>
-            <input class="radio__input visually-hidden" type="radio" name="impression" id="neutral" value="neutral">
-            <label for="neutral" class="radio__label form__label--radio">Затрудняюсь ответить</label>
+            <div class="radio">
+              <input class="radio__input visually-hidden" type="radio" name="impression" id="positive" value="positive" checked>
+              <label for="positive" class="radio__label">Скорее положительное</label>
+              <input class="radio__input visually-hidden" type="radio" name="impression" id="negative" value="negative">
+              <label for="negative" class="radio__label">Скорее отрицательное</label>
+              <input class="radio__input visually-hidden" type="radio" name="impression" id="neutral" value="neutral">
+              <label for="neutral" class="radio__label">Затрудняюсь ответить</label>
+            </div>
           </div>
           <div class="form__section form__section--visited-places">
             <h2 class="form__section-header form__section-header--visited-places">Посещенные достопримечательности:</h2>
             <div class="form__section-wrapper form__section-wrapper--visited-places checkbox">
               <input class="checkbox__input visually-hidden" type="checkbox" name="devilBridge" id="devilBridge" checked>
-              <label for="devilBridge" class="checkbox__label form__label--checkbox">Мост Дьявола</label>
+              <label for="devilBridge" class="checkbox__label">Мост Дьявола</label>
               <input class="checkbox__input visually-hidden" type="checkbox" name="bellMountain" id="bellMountain" checked>
-              <label for="bellMountain" class="checkbox__label form__label--checkbox">Гора-Колокол</label>
+              <label for="bellMountain" class="checkbox__label">Гора-Колокол</label>
               <input class="checkbox__input visually-hidden" type="checkbox" name="sladePark" id="sladePark" checked>
-              <label for="sladePark" class="checkbox__label form__label--checkbox">Слайд-парк</label>
+              <label for="sladePark" class="checkbox__label">Слайд-парк</label>
               <input class="checkbox__input visually-hidden" type="checkbox" name="redMountains" id="redMountains">
-              <label for="redMountains" class="checkbox__label form__label--checkbox">Красные скалы</label>
+              <label for="redMountains" class="checkbox__label">Красные скалы</label>
             </div>
           </div>
-          <div class="form__section form__section--emotions field">
+          <div class="form__section form__section--emotions">
             <h2 class="form__section-header form__section-header--emotions">Опишите свои эмоции:</h2>
-            <textarea class="field__input field__input--textarea" placeholder="Опишите подробно все свои восторги" name="emotions" id="emotions"></textarea>
+            <div class="field">
+              <textarea class="field__input field__input--textarea" placeholder="Опишите подробно все свои восторги" name="emotions" id="emotions"></textarea>
+            </div>
           </div>
           <div class="form__section form__section--submit">
             <input type="submit" class="button form__submit" value="Отправить отзыв">
