@@ -62,20 +62,21 @@
   .checkbox__label {
     margin: 20px 0 42px 80px;
 
-    &[for="bellMountain"] {
-      margin-right: 12px;
+    &--devil-bridge {
+      margin-right: 68px;
+    }
+    &--slide-park {
+      margin-right: 85px;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
   .checkbox__label {
-    &[for="bellMountain"] {
-      margin-right: 0;
-    }
+    margin-right: 68px;
 
-    &[for="redMountains"] {
-      margin-right: 5px;
+    &:last-of-type {
+      margin-right: 0;
     }
   }
 }

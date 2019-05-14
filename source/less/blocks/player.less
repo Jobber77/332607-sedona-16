@@ -117,7 +117,7 @@
   }
 
   .player__seek-wrapper {
-    order: initial;
+    order: 2;
     width: 389px;
     height: auto;
     background-color: transparent;
@@ -135,14 +135,18 @@
   }
 
   .player__control {
-    order: initial;
+    &--replay {
+      margin-left: 0;
+      order: 1;
+    }
 
     &--fullscreen {
       margin-right: 6px;
+      order: 4;
     }
 
-    &--replay {
-      margin-left: 0;
+    &--subtitles {
+      order: 3;
     }
 
     &--seek {
